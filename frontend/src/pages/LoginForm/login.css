@@ -1,0 +1,19 @@
+.loginwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../../assets/KTM.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.loginwrapper .wrapper {
+  background: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: black;
+  border-radius: 10px;
+  padding: 40px 50px;
+}
+

@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700;900&display=swap');
+
+:root{
+
+    --primaryColor: #119f48;
+    --primaryColorLight: white;
+    --bgColor: white;
+    --formColor: white;
+    --whiteColor: white;
+    --blackColor: black;
+    --greyColor: grey;
+    --inputColor: white;
+    --cardColor: white;
+
+    /*Fonts ang Typography*/
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 2rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallesFontSize: 0.75rem;
+    --borderRadius: 3rem;
+
+}
+
+.Home {
+  position: relative;
+  height: 95vh;
+  width: 100%;
+  top: 0;
+
+  .videoBg {
+    position: absolute;
+    height: 88%;
+    width: 100%;
+
+    video{
+      height: 118%;
+      width: 100%;
+      object-fit: cover;
+    }
+ 
+}
+  .sectionText{
+    position: absolute;
+    height: 100%;
+    top: 30%;
+    bottom: 50%;
+    color: white;
+    padding: 0 1.3rem;
+
+    h1{
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: rgb(255, 255, 255);
+    }
+
+    p{
+      padding: 1rem 0;
+      font-size: 1rem;
+      font-weight: 500;
+      color: white;
+    }
+
+    .getstartedbtn{
+      gap: .5rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      font-size: var(--h3FontSize);
+    }
+
+
+
+    .getstartedbtn{
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: var(--borderRadius);
+      padding: 0.8rem 1rem;
+      color: var(--whiteColor);
+      background: var(--primaryColor);
+    
+      &:hover{
+          transition: .3s ease;
+      }
+    }
+
+  }
+}
+
+/*Media Queries*/
+@media screen  and (min-width: 480px){
+  .Home{
+    .sectionText{
+      padding: 0 2rem;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+    }
+
+    h1{
+      font-size: var(--biggestFontSize);
+      font-weight: 900;
+    }
+
+    p{
+      padding: 1rem 0;
+      font-size: var(--h2FontSize);
+      max-width: 70%;
+      margin: auto;
+       
+     }
+
+     .getstartedbtn{
+      gap: .5rem;
+      padding-right: 2rem;
+      padding-left: 2rem;
+      font-size: var(--h3FontSize);
+      margin: auto;
+    }
+  }
+  
+}
+
+@media screen and (min-width: 769px) {
+  .Home{
+    .sectionText{
+      width: 100%;
+
+      h1{
+        font-size: 4rem;
+        font-weight: 900;
+        max-width: 70%;
+        margin: auto;
+      }
+
+      p{
+        padding: 1rem 0;
+        font-size: var(--h2FontSize);
+        max-width: 70%;
+        margin: auto;
+      }
+
+      .getstartedbtn{
+        gap: .5rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        font-size: var(--h3FontSize);
+        margin: auto;
+      }
+
+
+    }
+  }
+  
+}
+
+@media screen and (min-width: 1040px) {
+  .Home{
+    position: relative;
+  }
+  
+}
+
+.head {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.head h2 {
+  display: flex;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: grey;
+}
+
+.head h1 {
+  padding-top: 8px;
+  font-size: 2.5rem;
+  font-weight: 780;
+}
+
+.head h3 {
+  padding-top: 15px;
+  font-size: 1.1rem;
+  font-weight: 450;
+}
+
+.head h4 {
+  font-size: 1rem;
+  font-size: 450;
+}
+
+.head h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-top: 20px;
+}
+
+.head2 {
+  display: flex;
+  justify-content: center;
+}
+
+.head2 img {
+  display: flex;
+  width: 50px;
+  height: 50px;
+}
+
+.head2 > div {
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head2 > div p {
+  margin-top: 10px;
+}
+
+.head3 img {
+  width: 420px;
+  height: 410px;
+}
+
+.head3 > div p {
+  font-size: 20px;
+  margin-top: 6px;
+}
+
+
+
+

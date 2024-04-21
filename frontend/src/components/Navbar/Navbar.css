@@ -1,0 +1,138 @@
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  position: fixed;
+  border-bottom: 1.5px solid rgba(88, 223, 117, 0.492);
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 254, 254, 0.778);
+  top: 0;
+  z-index: 1000;
+}
+
+.logodiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signUpBtn:hover {
+  color: var(--primaryColor);
+}
+.signUpBtn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--borderRadius);
+  padding: 0.8rem 1rem;
+  color: black;
+
+
+  &:hover {
+    transition: 0.3s ease;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    position: absolute;
+    width: 70%;
+    top: -100rem;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    background: rgba(255, 255, 255, 0.94);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: 0.8s ease-in-out;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 3px 4px rgba(236, 213, 213, 0.516);
+  }
+
+  li {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem 0;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      color: #119f48;
+      border-bottom: 1.5px solid #119f48;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+  }
+  .menuIcon,
+  .closeIcon {
+    font-size: 2rem;
+    &:hover {
+      color: #119f48;
+    }
+  }
+
+  .closeIcon {
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    color: black;
+    transform: translate(-50%);
+    width: 100%;
+  }
+  .shownavBar {
+    top: 8rem;
+  }
+}
+
+/*Media Queries*/
+@media screen and (min-width: 768px) {
+  .navBar {
+    .logodiv {
+      span {
+        font-size: 1.5rem;
+      }
+    }
+    .closeIcon,
+    .menuIcon {
+      display: none;
+    }
+    .menu {
+      ul {
+        display: flex;
+        gap: 5rem;
+
+        li {
+          font-size: 1.2rem;
+          font-weight: 500;
+          padding: 1rem 0;
+          text-align: center;
+          cursor: pointer;
+
+          &:hover {
+            color: #119f48;
+            border-bottom: 1.5px solid #119f48;
+          }
+        }
+      }
+    }
+  }
+}
+/* @media screen and (min-width: 1240x) {
+  .navBar{
+    padding: 2rem 6rem;
+    .menu{
+      ul{
+        gap: 4rem;
+      }
+    }
+  }
+} */
+
+/* @media screen and (min-width: 1440px) {
+  .navBar{
+    padding: 2rem 14rem;
+  }
+
+} */
+
