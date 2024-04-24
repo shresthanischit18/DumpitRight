@@ -17,7 +17,7 @@ export const addBlog = asyncErrorHandler(async (req, res) => {
     if (!blogDetails || !coverImg) {
         throwError({
             message: "Please provide all the details",
-            statusCode: HttpStatus.BAD_REQUEST,
+            statusCode: HttpStatus.BAD_REQUESTs,
         });
     }
 

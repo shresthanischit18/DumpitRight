@@ -12,12 +12,11 @@ const transporterConfig = {
 const mailMessage = {
     from: FROM_EMAIL,
 
-    // Email or array of email
     to: "",
 
-    subject: "Notice About Upcoming Exam",
+    subject: "Notice About Upcoming Mail",
 
-    // Mail Message should be here in html format
+   
     html: `        `,
 };
 
