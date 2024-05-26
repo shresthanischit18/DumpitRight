@@ -63,11 +63,6 @@ export const USER_SIDEBAR_LINKS = [
 
 export const ADMIN_SIDEBAR_LINKS = [
   {
-    name: 'Dashboard',
-    path: '/admin/dashboard',
-    icon: <MdDashboard className='h-5 w-5' />,
-  },
-  {
     name: 'Home',
     path: '/',
     icon: <IoHomeOutline className='h-5 w-5' />,
@@ -75,7 +70,7 @@ export const ADMIN_SIDEBAR_LINKS = [
 
   {
     name: 'Collectors',
-    path: '/admin/dashboard/collectors',
+    path: '/admin/dashboard/',
     icon: <FaUsers className='h-5 w-5' />,
   },
   {

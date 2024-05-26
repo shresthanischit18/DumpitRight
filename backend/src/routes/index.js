@@ -50,7 +50,6 @@ const apiRoutes = [
         router: categoryRouter,
         path: "/category",
     },
-
     {
         router: orderRouter,
         path: "/orders",

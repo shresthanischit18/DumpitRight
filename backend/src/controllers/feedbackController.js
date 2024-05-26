@@ -58,7 +58,8 @@ export const sendFeedbackRequestMail = async () => {
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
 
-    const day = format(yesterday, "EEEE");
+    const day = format(yesterday, "EEEE"); // Sunday, Monday ....
+    // const day = "Saturday"
 
     const schedules = await RegularPickupSchedule.find({
         day,

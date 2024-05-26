@@ -6,9 +6,6 @@ export const createProduct = asyncErrorHandler(async (req, res) => {
 
     // Extract filenames from uploaded images
     const images = req.files.map((file) => file.filename);
-    console.log("image is ", images, typeof images);
-    console.log("point is ", point, typeof point);
-
     try {
         // Create a new product using data from request body and uploaded images
         const product = await Product.create({
@@ -34,7 +31,7 @@ export const createProduct = asyncErrorHandler(async (req, res) => {
 export const updateProduct = asyncErrorHandler(async (req, res) => {
     try {
         // Extract product ID from request parameters
-        const { id } = req.params;
+        const { productID: id } = req.params;
 
         // Find the product by ID
         let product = await Product.findById(id);

@@ -54,6 +54,8 @@ export const login = asyncErrorHandler(async (req, res) => {
         data: {
             user: {
                 ...user.toObject(),
+                password: null,
+                verificationCode: null,
                 subscription: userSubscriptionDetails,
             },
 

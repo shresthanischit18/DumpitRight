@@ -9,6 +9,9 @@ import { FaSignInAlt } from "react-icons/fa";
 const Sidebar = () => {
   const navigate = useNavigate();
   const userInfo = JSON.parse(getCookie("user"));
+
+  console.log(userInfo)
+
   return (
     <div>
       <Card className="h-full w-full max-w-[20rem] p-4 pt-0 bg-white border-r border-gray-200 shadow-none rounded-none flex flex-col justify-between">

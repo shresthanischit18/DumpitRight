@@ -47,6 +47,17 @@ connectDB().then(() => {
     });
 
     // Cron job to run every day at midnight (00:00)
+    /*
+        # ┌────────────── second (optional)
+        # │ ┌──────────── minute
+        # │ │ ┌────────── hour
+        # │ │ │ ┌──────── day of month
+        # │ │ │ │ ┌────── month
+        # │ │ │ │ │ ┌──── day of week
+        # │ │ │ │ │ │
+        # │ │ │ │ │ │
+        # * * * * * *
+    */
     cron.schedule("* * * * *", async () => {
         console.log("Running cron job to update expired subscriptions");
 
@@ -87,7 +98,7 @@ connectDB().then(() => {
 
     // This runs every day at 7 AM
     // Sends feedbackform to users who had a pickup yesterday
-    cron.schedule("0 12 * * *", () => {
+    cron.schedule("0 7 * * *", () => {
         sendFeedbackRequestMail();
         console.log("Feedback Mail Corn Job");
     });

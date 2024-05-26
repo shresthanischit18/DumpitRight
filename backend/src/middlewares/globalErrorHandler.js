@@ -9,6 +9,7 @@ const handleError = (error, req, res, next) => {
     status: error.statusCode || 500,
     message: error.message,
   });
+  
   next();
 };
 
