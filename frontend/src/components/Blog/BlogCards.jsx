@@ -21,9 +21,9 @@ const BlogCards = ({ blog, deleteBlog }) => {
         )}
 
         <Link to={`/blogs/${blog._id}`}>
-          <div >
+          <div>
             <img
-              src={`http://localhost:8000/${coverImg}`}
+              src={`${import.meta.env.VITE_API_URL}/${coverImg}`}
               className="h-[300px] w-[400px] object-cover rounded-md "
             />
             <h3 className="mt-4 mb-2 font-bold hover:text-green-600 cursor-pointer">

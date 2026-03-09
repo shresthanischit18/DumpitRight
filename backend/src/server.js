@@ -22,13 +22,15 @@ import {
 export const app = express();
 
 app.use(express.json());
-cors({
-    origin: [
-        "http://localhost:5173",
-        "https://dumpit-right-project.vercel.app",
-    ],
-    credentials: true,
-});
+app.use(
+    cors({
+        origin: [
+            "http://localhost:5173",
+            "https://dumpit-right-project.vercel.app",
+        ],
+        credentials: true,
+    })
+);
 app.use(logger("dev"));
 app.use(cookieParser());
 app.use(express.static(STATIC_FOLDER));

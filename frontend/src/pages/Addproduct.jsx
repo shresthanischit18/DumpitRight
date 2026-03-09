@@ -167,7 +167,7 @@ const Addproduct = () => {
                                 {images.map((image, imageIndex) => (
                                   <img
                                     key={imageIndex}
-                                    src={`http://localhost:8000/${image}`}
+                                    src={`${import.meta.env.VITE_API_URL}/${image}`}
                                     alt={`Product ${index + 1}`}
                                     className="w-48 h-48  object-cover"
                                   />

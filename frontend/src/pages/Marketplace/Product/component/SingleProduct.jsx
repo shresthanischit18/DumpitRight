@@ -54,8 +54,8 @@ export default function SingleProduct() {
                   <>
                     <div className="">
                       <img
-                        src={`http://localhost:8000/${image}`}
-                        alt={`https://localhost:8000/${image}`}
+                        src={`${import.meta.env.VITE_API_URL}/${image}`}
+                        alt={`${import.meta.env.VITE_API_URL}/${image}`}
                         className="w-full h-full"
                       />
                     </div>

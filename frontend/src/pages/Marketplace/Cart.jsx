@@ -79,7 +79,7 @@ export default function Cart() {
     if (totalPoints > userCookie.rewardPoint) {
       // If total points exceed user's reward points, show an alert message
       toast.error(
-        " 'Total points exceed your available reward points. Please adjust the quantity or remove items.'"
+        " 'Total points exceed your available reward points. Please adjust the quantity or remove items.'",
       );
     } else {
       const orderItems = getItemsFromCart();
@@ -99,7 +99,7 @@ export default function Cart() {
         setCookie("user", JSON.stringify(userCookie));
 
         toast.success(
-          "Your order is placed successfully. It will be delivered soon."
+          "Your order is placed successfully. It will be delivered soon.",
         );
 
         setCartItems(clearCart());
@@ -154,7 +154,7 @@ export default function Cart() {
                       <li key={product._id} className="flex py-6">
                         <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                           <img
-                            src={`http://localhost:8000/${product.images[0]}`}
+                            src={`${import.meta.env.VITE_API_URL}/${product.images[0]}`}
                             alt={product.title}
                             className="h-full w-full object-cover object-center"
                           />

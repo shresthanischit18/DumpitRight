@@ -1,10 +1,5 @@
 import { Disclosure } from "@headlessui/react";
-import {
-
-  FunnelIcon,
-  MinusIcon,
-  PlusIcon,
-} from "@heroicons/react/20/solid";
+import { FunnelIcon, MinusIcon, PlusIcon } from "@heroicons/react/20/solid";
 import { useEffect, useState } from "react";
 import { BsPlus } from "react-icons/bs"; // Import icons from react-icons library
 import { Link } from "react-router-dom";
@@ -20,7 +15,6 @@ const filters = [
     options: [
       { value: "Recycle", label: "Recycle" },
       { value: "Reuse", label: "Reuse" },
-     
     ],
   },
 ];
@@ -65,7 +59,7 @@ export default function ProductList() {
     } else {
       // Remove category from selectedCategories array
       setSelectedCategories((prevSelected) =>
-        prevSelected.filter((c) => c !== category)
+        prevSelected.filter((c) => c !== category),
       );
     }
   };
@@ -74,7 +68,7 @@ export default function ProductList() {
   const filteredProducts =
     selectedCategories.length > 0
       ? allProductDetails.filter((product) =>
-          selectedCategories.includes(product.category)
+          selectedCategories.includes(product.category),
         )
       : allProductDetails;
 
@@ -151,7 +145,7 @@ export default function ProductList() {
                                     defaultValue={option.value}
                                     type="checkbox"
                                     defaultChecked={selectedCategories.includes(
-                                      option.value
+                                      option.value,
                                     )}
                                     className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                     onChange={(e) =>
@@ -192,7 +186,7 @@ export default function ProductList() {
                               {product.images.map((image, index) => (
                                 <img
                                   key={index}
-                                  src={`http://localhost:8000/${image}`}
+                                  src={`${import.meta.env.VITE_API_URL}/${image}`}
                                   alt={image}
                                   className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                                 />
